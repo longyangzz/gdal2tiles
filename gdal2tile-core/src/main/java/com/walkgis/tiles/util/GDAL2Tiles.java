@@ -393,7 +393,7 @@ public class GDAL2Tiles {
 
         Map<String, String> metadata = new HashMap<String, String>();
         metadata.put("description", "");
-        metadata.put("format", String.valueOf(5));
+        metadata.put("format", "png");
         metadata.put("name", new File(this.input_file).getName());
         metadata.put("type", "OVERLAY");
         metadata.put("version", "1.0.0");

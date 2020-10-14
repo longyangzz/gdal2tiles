@@ -21,5 +21,5 @@ public abstract class Renderer {
         return String.format("Renderer(suffix={suffix!r})", suffix);
     }
 
-    public abstract byte[] render(BufferedImage image);
+    public abstract byte[] render(BufferedImage image) throws IOException;
 }

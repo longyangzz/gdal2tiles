@@ -25,7 +25,7 @@
         <javafx.version>11.0.2</javafx.version>
         <finalName>gdal2tiles</finalName>
         <!--这里指定打包的位置-->
-        <outputDirectory>E:/out</outputDirectory>
+        <outputDirectory>D:/out</outputDirectory>
     </properties>
 
     <dependencies>

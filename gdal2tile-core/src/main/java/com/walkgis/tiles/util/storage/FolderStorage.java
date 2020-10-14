@@ -18,6 +18,8 @@ public class FolderStorage extends Storage {
             this.renderer = new PngRenderer();
         else if (metadata.get("format").equalsIgnoreCase("jpg"))
             this.renderer = new JpegRenderer(Integer.parseInt(metadata.getOrDefault("compression", "75")));
+        else if (metadata.get("format").equalsIgnoreCase(""))
+            this.renderer = new PngRenderer();
         else throw new Exception("输出格式错误");
     }
 

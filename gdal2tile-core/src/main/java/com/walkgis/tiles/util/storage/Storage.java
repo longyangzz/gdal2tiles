@@ -1,6 +1,7 @@
 package com.walkgis.tiles.util.storage;
 
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 
 public abstract class Storage {
 
@@ -29,9 +30,9 @@ public abstract class Storage {
 
 //    public abstract void post_import(TmsPyramid pyramid);
 
-    public abstract void save(int x, int y, int z, BufferedImage image);
+    public abstract void save(int x, int y, int z, BufferedImage image) throws IOException;
 
-    public void save_border(int x, int y, int z) {
+    public void save_border(int x, int y, int z) throws IOException {
         this.save(x, y, z, this.border_image());
     }
 

@@ -5,6 +5,7 @@ import com.walkgis.tiles.util.render.JpegRenderer;
 import com.walkgis.tiles.util.render.PngRenderer;
 import com.walkgis.tiles.util.render.Renderer;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.Map;
 
 public class GeopackageStorage extends Storage {
@@ -27,7 +28,7 @@ public class GeopackageStorage extends Storage {
 
 
     @Override
-    public void save(int x, int y, int z, BufferedImage image) {
+    public void save(int x, int y, int z, BufferedImage image) throws IOException {
         byte[] contents = this.renderer.render(image);
         this.geopackage.insert(x, y, z, Long.parseLong("2"), contents);
     }
